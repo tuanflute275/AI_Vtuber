@@ -1,0 +1,35 @@
+# ==============================================================
+# requirements.txt — AI VTuber Streamer
+# Cài đặt: pip install -r requirements.txt
+# ==============================================================
+
+# --- AI & Language Model ---
+google-generativeai>=0.7.0
+
+# --- Speech-to-Text ---
+faster-whisper>=1.0.3
+sounddevice>=0.4.7
+numpy>=1.24.0
+
+# --- Text-to-Speech ---
+edge-tts>=6.1.9
+
+# --- Audio Routing ---
+# Lưu ý: Trên Windows, cài pyaudio từ:
+# pip install pipwin && pipwin install pyaudio
+# HOẶC: pip install pyaudio (nếu đã có Microsoft C++ Build Tools)
+pyaudio>=0.2.14
+
+# --- Audio Processing ---
+pydub>=0.25.1
+
+# --- Environment & Config ---
+python-dotenv>=1.0.0
+
+# --- Facebook Scraping ---
+selenium>=4.20.0
+undetected-chromedriver>=3.5.5
+
+# --- Utilities ---
+colorama>=0.4.6
+rich>=13.7.0
