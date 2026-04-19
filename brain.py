@@ -101,6 +101,19 @@ class AIBrain:
             logger.info(f"💬 Response: '{fake_resp}'")
             return fake_resp
 
+        # Kiểm tra câu trả lời dựng sẵn (Predefined QA)
+        import common_qa
+        common_ans = common_qa.find_common_answer(message)
+        if common_ans:
+            if source == "comment":
+                author_str = author if author else "Khán giả"
+                final_ans = f"@ {author_str}: {common_ans}"
+            else:
+                final_ans = common_ans
+                
+            logger.info(f"⚡ Predefined Response: '{final_ans}'")
+            return final_ans
+
         # Retry logic
         for attempt in range(3):
             try:
